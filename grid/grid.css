@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    color: hsl(20, 10%, 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "header"
+    "menu1"
+    "main"
+    "menu2"
+    "footer"
+    ;
+}
+
+section
+{
+    margin: 0 2rem;
+}
+
+article
+{
+    margin: 2rem 0;
+}
+
+header
+{
+    background-color: hsl(20, 50%, 30%);
+    height: 80px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-area: header;
+}
+
+body > div
+{
+    background-color: hsl(20, 30%, 40%);
+}
+
+aside
+{
+    background-color: hsl(20, 80%, 50%);
+    display: none;
+    grid-area: aside;
+}
+
+nav
+{
+    background-color: hsl(20, 30%, 60%);
+    display: none;
+    
+}
+
+main
+{
+    background-color: hsl(20, 20%, 80%);
+    display: grid;
+    padding: 2rem;
+    grid-area: main;
+}
+
+footer
+{
+    background-color: hsl(20, 50%, 30%);
+    height: 80px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-area: footer;
+}
+div{
+    height: 80px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    
+}
+main h2{
+    display: grid;
+    text-align: center;
+    padding: 2rem;
+}
+
+.menu1{
+    display: flex;
+    grid-area: menu1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu2{
+    grid-area: menu2;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aside1{
+    grid-area: aside1;
+    text-align: center;
+    align-content: center;
+
+}
+.aside2{
+    grid-area: aside2;
+    text-align: center;
+    align-content: center;
+}
+
+@media screen and (min-width: 1000px) {
+
+    header{
+        height: 100px;
+        margin-top: 23px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+       
+    }
+    footer{
+        height: 100px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        
+    }
+    
+    aside{
+        display: grid;
+    }
+    main{
+    }
+    nav{
+        display: block;
+        width: 50%;
+    }
+    div{
+        display: block;
+        width: 50%;
+    }
+
+    .menu1, .menu2{
+        height: 40px;
+    }
+    body{
+        margin: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "header header header header header"
+        "menu1 menu1 menu1 menu2 menu2"
+        "aside1 main main aside2 aside2"
+        "footer footer footer footer footer"
+        
+        ;
+        
+        
+    }
+
+    
+}

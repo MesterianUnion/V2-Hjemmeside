@@ -1,0 +1,78 @@
+body{
+    background-color: rgba(0, 42, 17, 0.701);
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ur{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr ;
+    border: 12px solid rgb(255, 255, 255);
+    height: 300px;
+    width: 300px;
+    border-radius: 250px;
+    z-index: 1;
+    justify-items: center;
+    align-self: center;
+}
+
+.viserstor{
+    display: block;
+    width: 10px;
+    height: 50%;
+    background-color: black;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    transform: rotate(0deg);
+    transform-origin: bottom;
+    border-top-right-radius: 100px;
+    animation-name: vstor;
+    animation-duration: 1s;
+    animation-iteration-count: 50;
+    animation-timing-function: linear;
+}
+
+@keyframes vstor {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+.viserlille {
+    display: block;
+    width: 13px;
+    height: 40%;
+    background-color: black;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    transform: translateY(25%) rotate(0deg);
+    transform-origin: bottom;
+    border-top-right-radius: 100px;
+    animation-name: vlille;
+    animation-duration: 4s;
+    animation-iteration-count: 200;
+    animation-timing-function: linear;
+
+}
+
+@keyframes vlille {
+    0% {transform: translateY(25%) rotate(0deg) }
+    100% {transform:translateY(25%) rotate(360deg) }
+}
+
+.prik{
+    display: block;
+    background-color: aliceblue;
+    height: 20px;
+    width: 20px;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    border-radius: 8px;
+    align-self: center;
+    transform: rotate(45deg);
+
+}

@@ -1,0 +1,85 @@
+
+body{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.box{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+img{
+    border-radius: 20px;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    transition: all 600ms ease-in;
+}
+    
+.box:hover .main{
+    transform: scale(1.1) rotate(15deg) translatex(150px);
+    z-index: 5;
+}
+.box:hover .main1{
+    transform: scale(1.1) rotate(11deg) translatex(80px);
+    z-index: 4;
+}
+.box:hover .main2{
+    transform: scale(1.1) rotate(4deg) translatex(20px);
+    z-index: 3;
+}
+.box:hover .main3{
+    transform: scale(1.1) rotate(-4deg) translatex(-40px);
+    z-index: 2;
+}
+.box:hover .main4{
+    transform: scale(1.1) rotate(-9deg) translatex(-120px);
+    z-index: 1;
+}
+
+img#m1:hover{
+    transition: all 600ms ease-out;
+    transform: scale(1.2) rotate(13deg) translatex(140px);   
+}
+img#m2:hover{
+    transition: all 300ms ease-out;
+    transform: scale(1.2) rotate(9deg) translatex(60px);
+}
+img#m3:hover{
+    transition: all 400ms ease-out;
+    transform: scale(1.2) rotate(1deg) translatex(5px);
+}
+img#m4:hover{
+    transition: all 300ms ease-in;
+    transform: scale(1.2) rotate(-6deg) translatex(-60px);
+}
+img#m5:hover{
+    transition: all 400ms ease-in;
+    transform: scale(1.2) rotate(-11deg) translatex(-170px);;
+}
+
+img#m1:active{
+    transition: all 300ms ease-out;
+    transform: scale(1.2) rotate(3deg) translatex(240px);   
+}
+img#m2:active{
+    transition: all 400ms ease-in-out;
+    transform: scale(1.2) rotate(2deg) translatey(-60px);
+}
+img#m3:active{
+    transition: all 400ms ease-out;
+    transform: scale(1.2) rotate(0deg) translatey(-75px);
+}
+img#m4:active{
+    transition: all 400ms ease-in;
+    transform: scale(1.2) rotate(-9deg) translatex(-60px) translatey(-60px);
+}
+img#m5:active{
+    transition: all 300ms ease-in;
+    transform: scale(1.2) rotate(-11deg) translatex(-180px) translatey(-50px);
+}

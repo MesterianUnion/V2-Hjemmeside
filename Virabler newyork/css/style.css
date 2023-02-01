@@ -1,0 +1,132 @@
+:root{
+    --hue: 180;
+    --main-color: hsl(var(--hue), 44%, 81%);
+    --light-main-color: hsl(var(--hue), 44%, 95%);
+    --medium-dark-main-color: hsl(var(--hue), 44%, 31%);
+    --dark-main-color: hsl(var(--hue), 40%, 11%);
+    --border-variabel: 2px solid var(--light-main-color);
+
+}
+/* Root CSS reset of margin/padding */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Main styling */
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--light-main-color);
+    color: var(--dark-main-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: var(--dark-main-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+header h1
+{
+    color: var(--light-main-color);
+}
+
+/* Nav/footer styling */
+
+nav, footer
+{
+    background-color: var(--medium-dark-main-color);
+    height: 40px;
+    color: aliceblue;
+    line-height: 40px;    
+}
+
+ul li a
+{
+    border-right: var(--border-variabel);
+    color: inherit;
+    text-decoration: none;
+    padding-right: 5px;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+
+
+/* Content area styling */
+
+section
+{
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    
+
+}
+
+h2, p
+{
+    margin-bottom: 20px;
+}
+
+footer p
+{
+    margin-bottom: 0;
+}
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+section article
+{
+    margin: 50px 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    
+
+}
+footer{
+    border: var(--border-variabel);
+}
+
+a:hover{
+    color: rgb(129, 228, 255);
+    border-radius: 200px;
+    transition: 400ms;
+    border-color: rgb(255, 255, 255);
+}
